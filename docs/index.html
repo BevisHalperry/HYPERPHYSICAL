@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-12-10 Tue 15:17 -->
+<!-- 2019-12-10 Tue 15:34 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>HYPERPHYSICAL</title>
@@ -23,12 +23,37 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org9b24459">Resources</a>
+<li><a href="#org78c5c05">HYPERPHYSICAL*</a>
 <ul>
-<li><a href="#orgc336309">GitHub - regl-project/regl: 👑 Functional WebGL</a></li>
-<li><a href="#org00c6caa">To<sub>Make</sub></a>
+<li><a href="#sec:overview">Description and Overview</a>
 <ul>
-<li><a href="#org081bcfa">Gist for platformio on spacemacs</a></li>
+<li><a href="#orgd88e223">Intended User Experience</a></li>
+</ul>
+</li>
+<li><a href="#sec:context">Context and Research</a>
+<ul>
+<li><a href="#org2c5b404">Concepts and Terms</a></li>
+<li><a href="#org7ff229f">Inspiration and Similar Projects</a></li>
+</ul>
+</li>
+<li><a href="#orga5a94d7">Technology and Fabrication</a>
+<ul>
+<li><a href="#orgc0a14b1">Sensing Sub-System</a></li>
+<li><a href="#org4d35ee0">Data Pipeline Sub-System</a></li>
+<li><a href="#org933ef74">Remote Ubication Expression Sub-System (RUESS)</a></li>
+</ul>
+</li>
+<li><a href="#org224ddcd">Development and Planning</a>
+<ul>
+<li><a href="#orgc1a57b5">Timeline and Milestones</a></li>
+<li><a href="#org03e4188">Potential Issues and Contingencies</a></li>
+<li><a href="#orga334091">Required Knowledge</a></li>
+<li><a href="#orgda07e1b">Required Learning</a></li>
+</ul>
+</li>
+<li><a href="#org2d16f50">Reports and Critiques</a>
+<ul>
+<li><a href="#org79ee3c1">Interim Report</a></li>
 </ul>
 </li>
 </ul>
@@ -36,53 +61,341 @@
 </ul>
 </div>
 </div>
+<div id="outline-container-org78c5c05" class="outline-2">
+<h2 id="org78c5c05">HYPERPHYSICAL*</h2>
+<div class="outline-text-2" id="text-org78c5c05">
 <p>
-A place for projects and resources for there creation. Organised by Project Codename.
+<b><i><i>ˌhaɪpəˈfɪzɪkəl</i></i> (*HYP</b>)erphysica (<b>E</b>)nviromental (<b>R</b>)emote (<b>P</b>)resence of (<b>HY</b>)drology, (<b>S</b>)pace, (<b>I</b>)ncalescence, (<b>C</b>)olour (<b>A</b>)nd (<b>L</b>)ight
 </p>
 
-<div id="outline-container-org9b24459" class="outline-2">
-<h2 id="org9b24459">Resources</h2>
-<div class="outline-text-2" id="text-org9b24459">
+<p>
+Remotely gathering environmentall and atmospheric data from a location and expressing the data in a tactile, playful and insightful way.
+</p>
 </div>
-<div id="outline-container-orgc336309" class="outline-3">
-<h3 id="orgc336309"><a href="https://github.com/regl-project/regl">GitHub - regl-project/regl: 👑 Functional WebGL</a></h3>
+
+<div id="outline-container-org3cd161c" class="outline-3">
+<h3 id="sec:overview">Description and Overview</h3>
+<div class="outline-text-3" id="text-sec:overview">
+<p>
+This project proposes a system to explore the idea of Environmental Remote Presence or Environmental Telepresence.
+In contrast to traditional remote presence where an individuals "presence" is transfered across a distance digitally usually through audio, video and occasionally haptic data, Environmental Remote Presence transfers an area or locations presence across a distance digitally not just through audio and video data but also through environmental data such as temprature, humidity, sky colour and visibility.
+This presence could be unidirectional or omnidirectional in nature, HYPERPHYSICAL is focused on unidirectional in the intrest of development time and cost, but only requires horizontal scaling to make the presence transfer both ways. 
+</p>
+
+<p>
+HYPERPHYSICAL will take the form of 3 interlinked subsystems:
+</p>
+
+<ul class="org-ul">
+<li><b>Sensing Sub-System</b>. A ruggedised, self-sustaining and unobtrusive sensing platform using off-the-shelf electronics which will gather environmental data using a suite of sensors and wirelessly transmit that data to the&#x2026;</li>
+<li><b>Data Pipeline Sub-System</b>. A cloud-based (hopefully self-hosted) system which will parse, sanitise, store/publish and prepare the data for analysis or expression on the&#x2026;</li>
+<li><b>Remote Ubication Expression Sub-System</b>. A device which expresses the data in a tactile, playful and insightful way. This may consist of LED's expressing the colour of the sky,mini fog machines expressing humidity, fans expressing wind-speed and Peltier modules expressing temperature.</li>
+</ul>
 </div>
-<div id="outline-container-org00c6caa" class="outline-3">
-<h3 id="org00c6caa">To<sub>Make</sub></h3>
-<div class="outline-text-3" id="text-org00c6caa">
+
+<div id="outline-container-orgd88e223" class="outline-4">
+<h4 id="orgd88e223">Intended User Experience</h4>
+<div class="outline-text-4" id="text-orgd88e223">
+<p>
+The first and foremost intention of HYPERPHYSICAL is to attempt to make the intangible "nature" of an remote environment tangible to a person through quantifying,transmitting and 
+expressing the natural properties of an environment. With the goal of improving and strengthening our relationship to the natural world and to explore ecological hyper-objects such
+as climate change and other effects of the modern Anthropocene. 
+</p>
+
+<p>
+Secondarily it could be used as:
+</p>
+<ul class="org-ul">
+<li>a tool for climate activism through the idea that without a connection to, or even just a reminder of, an non-urbanised environment it becomes harder to act in the best interests of ecology.</li>
+<li>a tool for improving mental health through the idea that exposure to natural environments improves our mental well-being.</li>
+<li>a tool for education to show through tactile and novel expression abstract values such as humidity, temperature and wind-speed.</li>
+</ul>
 </div>
-<div id="outline-container-org081bcfa" class="outline-4">
-<h4 id="org081bcfa">Gist for platformio on spacemacs</h4>
-<div class="outline-text-4" id="text-org081bcfa">
+</div>
+</div>
+
+
+<div id="outline-container-orgd3dfb7d" class="outline-3">
+<h3 id="sec:context">Context and Research</h3>
+<div class="outline-text-3" id="text-sec:context">
+</div>
+
+<div id="outline-container-org2c5b404" class="outline-4">
+<h4 id="org2c5b404">Concepts and Terms</h4>
+<div class="outline-text-4" id="text-org2c5b404">
+</div>
+<ul class="org-ul">
+<li><a id="orgc0d7df2"></a>Remote Presence<br /></li>
+<li><a id="org90b1b73"></a>Ecological Dataism<br /></li>
+
+<li><a id="org76c0b3f"></a>Playful Architecture<br /></li>
+
+<li><a id="org15bf64e"></a>Unobtrusive sensing<br />
+<div class="outline-text-5" id="text-org15bf64e">
+<ul class="org-ul">
+<li>Reliability</li>
+<li>Non-toxic</li>
+</ul>
+</div>
+</li>
+<li><a id="org0835a9a"></a>Hyperobjects<br /></li>
+<li><a id="org879bc57"></a>Environmental art<br /></li>
+<li><a id="orgf41701d"></a>Environmental sensing<br /></li>
+<li><a id="org1148dec"></a>Ecological Activism<br /></li>
+</ul>
+</div>
+
+
+<div id="outline-container-org7ff229f" class="outline-4">
+<h4 id="org7ff229f">Inspiration and Similar Projects</h4>
+<div class="outline-text-4" id="text-org7ff229f">
+</div>
+<ul class="org-ul">
+<li><a id="org9297fc3"></a><a href="http://datawalking.com/">DATA WALKING</a><br />
+<div class="outline-text-5" id="text-org9297fc3">
+<p>
+A paper based analog collection system for ecological data facilitated through walking
+</p>
+</div>
+</li>
+<li><a id="org55840f2"></a><a href="https://citizensense.net/">Home | Citizen Sense</a><br />
+<div class="outline-text-5" id="text-org55840f2">
+<p>
+A series of projects democratising and making accessable environmental data collection for Wild and Urban areas and Pollution monitoring.
+</p>
+</div>
+</li>
+<li><a id="org2d99f25"></a><a href="http://jones-bulley.com/living-symphonies/">Living Symphonies (Daniel Jones and James Bulley)</a><br />
+<div class="outline-text-5" id="text-org2d99f25">
+<p>
+A project which augments a natural landscape with the sonification of flora and fauna.
+</p>
+</div>
+</li>
+<li><a id="orgbed88c8"></a><a href="http://jones-bulley.com/vespers/">Vespers (James Bulley and Daniel Jones)</a><br />
+<div class="outline-text-5" id="text-orgbed88c8">
+<p>
+A sound installation that composes a musical score in real-time, drawn from the online activity of the United Kingdom
+</p>
+</div>
+</li>
+<li><a id="org8f30ad8"></a><a href="http://www.sara-rodrigues.com/degrees-of-abstraction.html">Degrees of Abstraction - SARA RODRIGUES</a><br />
+<div class="outline-text-5" id="text-org8f30ad8">
+<p>
+A performative installation where the participant explores physical manifestations of graphs displaying environment data.
+</p>
+</div>
+</li>
+<li><a id="orga6a28a1"></a><a href="https://robsweere.com/2012/01/28/styx-2/">STYX – Rob Sweere</a><br />
+<div class="outline-text-5" id="text-orga6a28a1">
+<p>
+A art peice part of the Hinterland Projects where people places a coin on their head and fixed their gaze on the sky.
+</p>
+</div>
+</li>
+
+<li><a id="orgb3ca21a"></a><a href="http://www.stanza.co.uk/sensity/">Sensity by Stanza</a><br />
+<div class="outline-text-5" id="text-orgb3ca21a">
+<p>
+A series of artworks based on monitoring city spaces. The results are visualisations and sonifications of environmental data made using custom built wireless sensor networks.
+</p>
+</div>
+</li>
+<li><a id="orgb3dfdeb"></a><a href="https://www.media.mit.edu/projects/tidmarsh-living-observatory-portal/overview/">Tidmarsh Living Observatory Portal — MIT Media Lab</a><br />
+<div class="outline-text-5" id="text-orgb3dfdeb">
+<p>
+A research project that focuses on the design and fabrication of a pavilion that will generate an immersive physical telepresence experience of a natural wetland.
+</p>
+</div>
+</li>
+<li><a id="orgb8da592"></a><a href="https://www.media.mit.edu/projects/haptic-footprint/overview/">Haptic Footprint — MIT Media Lab</a><br />
+<div class="outline-text-5" id="text-orgb8da592">
 <blockquote>
 <p>
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; Ansi color
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'ansi-color)
-(defun my-colorize-compilation-buffer ()
-  (when (eq major-mode 'compilation-mode)
-    (save-excursion
-      (ansi-color-apply-on-region compilation-filter-start (point)))))
-(ansi-color-for-comint-mode-on)
-(add-hook 'compilation-filter-hook 'my-colorize-compilation-buffer)
-</p>
-
-<p>
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; Platformio support
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(projectile-register-project-type 'platformio '("platformio.ini") "platformio run" nil "platformio run -t upload")
+Can we augment a stroll through nature with sensory experiences usually outside the range of our perception? Haptic Footprints explore using vibrotactile rendering for this purpose."
 </p>
 </blockquote>
 </div>
+</li>
+<li><a id="org0ad4aa6"></a><a href="https://www.media.mit.edu/projects/living-observatory-sensor-networks-for-documenting-and-experiencing-ecology/overview/">Living Observatory: Sensor networks for documenting and experiencing ecology — MIT Media Lab</a><br />
+<div class="outline-text-5" id="text-org0ad4aa6">
+<blockquote>
+<p>
+Living Observatory is an initiative for documenting and interpreting ecological change that will allow people, individually and collectively,
+to better understand relationships between ecological processes, human lifestyle choices, and climate change adaptation."
+The overarching project of the MIT Responsive Environment Lab in 2018, other projects from it are found here.
+</p>
+</blockquote>
+</div>
+</li>
+
+<li><a id="org1215b5d"></a><a href="https://www.media.mit.edu/projects/low-power-wireless-environmental-sensor-node/overview/">Low-power wireless environmental sensor network — MIT Media Lab</a><br />
+<div class="outline-text-5" id="text-org1215b5d">
+<p>
+The environmental sensor network behind many of the MIT Responsive Environments Tidmarsh project.
+</p>
+</div>
+</li>
+<li><a id="orgf329438"></a><a href="https://www.media.mit.edu/projects/doppelmarsh-cross-reality-environmental-sensor-data-browser/overview/">Doppelmarsh: Cross-reality environmental sensor data browser — MIT Media Lab</a><br />
+<div class="outline-text-5" id="text-orgf329438">
+<blockquote>
+<p>
+Doppelmarsh is a cross-reality sensor data browser built for experimenting with presence and multimodal sensory experiences. 
+Built on evolving terrain data from a physical wetland landscape, the software integrates real-time data from an environmental sensor network with real-time audio streams 
+and other media from the site. Sensor data is rendered in the scene in both visual representations and as 3D sonification. 
+Users can explore this data by walking on the virtual terrain in a first person view, or flying high above it. This flexibility allows Doppelmarsh to serve as an interface 
+to other research platforms on the site, such as Quadrasense, an augmented reality UAV system that blends a flying live camera view with a virtual camera from Doppelmarsh. 
+We are currently investigating methods for representing subsurface data, such as soil and water temperatures at depth, as well as automation in scene and terrain painting.
+</p>
+</blockquote>
+</div>
+</li>
+<li><a id="org0c3cc6a"></a><a href="https://www.media.mit.edu/projects/listentree-audio-haptic-display-in-the-natural-environment/overview/">Overview ‹ ListenTree: Audio-haptic display in the natural environment — MIT Media Lab</a><br />
+<div class="outline-text-5" id="text-org0c3cc6a">
+<p>
+A tree that conducts sounds coming from a remote wetland. 
+</p>
+<blockquote>
+<p>
+Our intervention is motivated by a need for forms of display that fade into the background, inviting attention rather than requiring it. We consume most digital information through devices that alienate us from our surroundings;
+ListenTree points to a future where digital information might become enmeshed in material.
+</p>
+</blockquote>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orga5a94d7" class="outline-3">
+<h3 id="orga5a94d7">Technology and Fabrication</h3>
+<div class="outline-text-3" id="text-orga5a94d7">
+</div>
+<div id="outline-container-orgc0a14b1" class="outline-4">
+<h4 id="orgc0a14b1">Sensing Sub-System</h4>
+<div class="outline-text-4" id="text-orgc0a14b1">
+</div>
+<ul class="org-ul">
+<li><a id="orgf6aaac5"></a>Microcontroller<br />
+<div class="outline-text-5" id="text-orgf6aaac5">
+<ul class="org-ul">
+<li>low cost</li>
+<li>low energy</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org1c59f5e"></a>Connectivity<br /></li>
+<li><a id="orgb11f5fe"></a>Atmospheric sensor<br />
+<ul class="org-ul">
+<li><a id="org52f0361"></a>BME680 - Temp, Pressure, Humidity, Air Quality<br />
+<ul class="org-ul">
+<li><a id="orgdf1f8bb"></a><a href="https://shop.pimoroni.com/products/bme680-breakout">BME680 Breakout - Air Quality, Temperature, Pressure, Humidity Sensor – Pimoroni Store</a><br />
+<div class="outline-text-7" id="text-orgdf1f8bb">
+</div>
+</li>
+<li><a id="org944fe74"></a><a href="https://github.com/BoschSensortec/BME680_driver">BoschSensortec/BME680<sub>driver</sub>: BME680 sensor driver / API including example guide. To report issues, go to https://community.bosch-sensortec.com/t5/Bosch-Sensortec-Community/ct-p/bst<sub>community</sub>.</a><br />
+<div class="outline-text-7" id="text-org944fe74">
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li><a id="org6238416"></a>Colour sensor<br /></li>
+</ul>
+</div>
+
+
+<div id="outline-container-org4d35ee0" class="outline-4">
+<h4 id="org4d35ee0">Data Pipeline Sub-System</h4>
+</div>
+
+
+<div id="outline-container-org933ef74" class="outline-4">
+<h4 id="org933ef74">Remote Ubication Expression Sub-System (RUESS)</h4>
+<div class="outline-text-4" id="text-org933ef74">
+<ul class="org-ul">
+<li>Interactive</li>
+<li>Informing</li>
+<li>Connecting</li>
+<li>Expressive</li>
+<li>Tactile</li>
+</ul>
+</div>
+
+<ul class="org-ul">
+<li><a id="orgddf5a5f"></a>3D printing<br /></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org224ddcd" class="outline-3">
+<h3 id="org224ddcd">Development and Planning</h3>
+<div class="outline-text-3" id="text-org224ddcd">
+</div>
+<div id="outline-container-orgc1a57b5" class="outline-4">
+<h4 id="orgc1a57b5">Timeline and Milestones</h4>
+<div class="outline-text-4" id="text-orgc1a57b5">
+</div>
+<ul class="org-ul">
+<li><a id="org3160118"></a><span class="todo WRITE">WRITE</span> Interim Report<br />
+<div class="outline-text-5" id="text-org3160118">
+<p>
+<a href="https://learn.gold.ac.uk/mod/assign/view.php?id=644375">learn.gold submission</a>
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="org8025352"></a><span class="todo MAKE">MAKE</span> Prototype Vertical Slice<br /></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-org03e4188" class="outline-4">
+<h4 id="org03e4188">Potential Issues and Contingencies</h4>
+</div>
+
+
+<div id="outline-container-orga334091" class="outline-4">
+<h4 id="orga334091">Required Knowledge</h4>
+</div>
+
+
+<div id="outline-container-orgda07e1b" class="outline-4">
+<h4 id="orgda07e1b">Required Learning</h4>
+</div>
+</div>
+
+
+
+<div id="outline-container-org2d16f50" class="outline-3">
+<h3 id="org2d16f50">Reports and Critiques</h3>
+<div class="outline-text-3" id="text-org2d16f50">
+</div>
+<div id="outline-container-org79ee3c1" class="outline-4">
+<h4 id="org79ee3c1">Interim Report</h4>
+<div class="outline-text-4" id="text-org79ee3c1">
+</div>
+<ul class="org-ul">
+<li><a id="orgbfbd76d"></a>Project Overview<br /></li>
+
+<li><a id="orgc497f6c"></a>Summary of Work to Date<br /></li>
+
+<li><a id="orgb9ebcf8"></a>Evaluation<br /></li>
+
+<li><a id="org4592348"></a>Revised project plan<br /></li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Bevis</p>
-<p class="date">Created: 2019-12-10 Tue 15:17</p>
+<p class="date">Created: 2019-12-10 Tue 15:34</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
